@@ -1,0 +1,42 @@
+﻿@model Test.Models.AddItemViewModel
+@{
+    ViewBag.Title = "AddNewItem";
+}
+
+<h2>AddNewItem</h2>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Online Store</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <h3>Name</h3>
+            <div>
+                <label for="Name">Name:</label>
+                @Html.EditorFor(md => md.Name)
+            </div>
+            <h3>Description</h3>
+            <div>
+                <label for="Description">Description:</label>
+                @Html.EditorFor(md => md.Description)
+            </div>
+            <h3>Price</h3>
+            <div>
+                <label for="Price">Price:</label>
+                @Html.EditorFor(md => md.Price)
+            </div>
+            <h3>Category</h3>
+            <div>
+                <label for="Category">Category:</label>
+                @Html.EditorFor(md => md.Category)
+            </div>
+            <div>
+                <input type="submit" name="Edit" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

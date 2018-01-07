@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Test.Models.BusketViewModel>
+@{
+    ViewBag.Title = "Busket";
+}
+
+<h2>Busket</h2>
+
+<html>
+<head Busket />
+<body>
+    <div class="items">
+        @Html.ValidationMessage("Error")
+        @if (Model != null)
+        {
+            foreach (var p in Model)
+            {
+                <form method="post" action="DeleteProduct">
+                    <input type="hidden" value="@p.id" name="id" />
+                    <div class="item">
+                        <h3>@Html.DisplayFor(modelItem => p.Product_Name)</h3>
+                        <h4>@Html.DisplayFor(modelItem => p.Number)</h4>
+                        <h5>@Html.DisplayFor(modelItem => p.Price)</h5>
+                    </div>
+                    <input type="submit" name="Delete" value="Delete">
+                </form>
+            }
+            <a href="~/Home/MakeOrder">Make an oder</a>
+            <a href="~/Home/Index">Continue shopping</a>
+        }
+    </div>
+</body>
+</html>

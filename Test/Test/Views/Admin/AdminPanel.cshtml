@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Test.Models.AdminPanelViewModel>
+@{
+    ViewBag.Title = "AdminPanel";
+}
+
+<h2>AdminPanel</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head Products />
+<body>
+    @Html.ValidationMessage("Error")
+    @if (Model != null)
+    {
+        <div class="items">
+            <table style="border: 1px solid black; table-layout: fixed;">
+                <tr>
+                    <th style="border: 1px solid black">id</th>
+                    <th style="border: 1px solid black">First Name</th>
+                    <th style="border: 1px solid black">Last Name</th>
+                    <th style="border: 1px solid black">Email</th>
+                    <th style="border: 1px solid black">Reg_date</th>
+                    <th style="border: 1px solid black">Last_seen_date</th>
+                    <th style="border: 1px solid black">Delete_date</th>
+                    <th style="border: 1px solid black">Status</th>
+                    <th style="border: 1px solid black">Role</th>
+                    <th style="border: 1px solid black">Edit</th>
+                    <th style="border: 1px solid black">Freeze</th>
+                    <th style="border: 1px solid black">ReStore</th>
+                </tr>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.id)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.First_Name)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Last_Name)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Email)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Reg_Date)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Last_Date)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Delete_Date)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Status)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Role)</th>
+                        <th style="border: 1px solid black">
+                            <form method="post" , action="AdminPanel">
+                                <input type="hidden" value="@p.id" name="saveid" />
+                                <input type="submit" name="Save" value="Edit" />
+                            </form>
+                        </th>
+                        <th style="border: 1px solid black">
+                            <form method="post" , action="Freeze">
+                                <input type="hidden" value="@p.id" name="id" />
+                                <input type="submit" name="Freeze" value="Freeze" />
+                            </form>
+                        </th>
+                        <th style="border: 1px solid black">
+                            <form method="post" , action="ReStore">
+                                <input type="hidden" value="@p.id" name="id" />
+                                <input type="submit" name="ReStore" value="ReStore" />
+                            </form>
+                        </th>
+                    </tr>
+                }
+            </table>
+            <a href="~/Admin/CreateNewUser">Create new user</a>
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model Test.Models.RegViewModel
+@{
+    ViewBag.Title = "Registration";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Online Store</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            @Html.ValidationSummary(true)
+            <h3>First Name</h3>
+            <div>
+                <label for="First_Name">First Name:</label>
+                @Html.EditorFor(md => md.First_Name)
+                @Html.ValidationMessageFor(md => md.First_Name)
+            </div>
+            <h3>Last Name</h3>
+            <div>
+                <label for="Last_Name">Last Name:</label>
+                @Html.EditorFor(md => md.Last_Name)
+                @Html.ValidationMessageFor(md => md.Last_Name)
+            </div>
+            <h3>Email</h3>
+            <div>
+                <label for="Email">Email:</label>
+                @Html.EditorFor(md => md.Email)
+                @Html.ValidationMessageFor(md => md.Email)
+            </div>
+            <h3>Password</h3>
+            <div>
+                <label for="Password">Password:</label>
+                @Html.PasswordFor(md => md.Password)
+                @Html.ValidationMessageFor(md => md.Password)
+            </div>
+            <div>
+                <input type="submit" name="Login" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

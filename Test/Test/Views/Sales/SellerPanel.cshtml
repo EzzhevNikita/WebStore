@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Test.Models.SellerPanelViewModel>
+@{
+    ViewBag.Title = "SellerPanel";
+}
+
+<html>
+<head Products />
+<body>
+    <div class="items">
+        @Html.ValidationMessage("Error")
+        @if (Model != null)
+        {
+            <table>
+                <tr>
+                    <th style="border: 1px solid black">id</th>
+                    <th style="border: 1px solid black">Name</th>
+                    <th style="border: 1px solid black">Description</th>
+                    <th style="border: 1px solid black">Price</th>
+                    <th style="border: 1px solid black">Category</th>
+                    <th style="border: 1px solid black">Edit</th>
+                </tr>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.id)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Name)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Description)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Price)</th>
+                        <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Category)</th>
+                        <th style="border: 1px solid black">
+                            <form method="post" , action="SellerPanel">
+                                <input type="hidden" value="@p.id" name="saveid" />
+                                <input type="submit" name="Save" value="Edit" />
+                            </form>
+                        </th>
+                    </tr>
+                }
+            </table>
+            <a href="~/Sales/AddNewItem">Add new item</a>
+            <a href="~/Sales/AddNewCategory">Add new category</a>
+            <a href="~/Sales/ViewOrders">Show Orders</a>
+        }
+    </div>
+</body>
+</html>

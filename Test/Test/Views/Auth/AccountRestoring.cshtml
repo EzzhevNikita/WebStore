@@ -1,0 +1,33 @@
+﻿@model Test.Models.RestoreViewModel
+@{
+    ViewBag.Title = "AccountRestoring";
+}
+
+<h2>Accouunt was freezed, change password to restore it</h2>
+
+<form action="" method="post">
+    <div>
+        @Html.ValidationSummary(true)
+        <h3>login</h3>
+        <div>
+            <label for="email">Login:</label>
+            @Html.EditorFor(md => md.email)
+            @Html.ValidationMessageFor(md => md.email)
+        </div>
+        <h3>New password</h3>
+        <div>
+            <label for="password">Password:</label>
+            @Html.PasswordFor(md => md.password)
+            @Html.ValidationMessageFor(md => md.password)
+        </div>
+        <h3>Repeat password</h3>
+        <div>
+            <label for="repetedpassword">Repeat password:</label>
+            @Html.PasswordFor(md => md.repetedpassword)
+            @Html.ValidationMessageFor(md => md.repetedpassword)
+        </div>
+        <div>
+            <input type="submit" name="send" />
+        </div>
+    </div>
+</form>

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Unknown";
+}
+
+<h2>Unknown error</h2>
+
+<p>An unexpected error occurred while performing the operation. Inform the administrator of the information below.</p>
+
+
+@if (Model != null && HttpContext.Current.IsDebuggingEnabled)
+{
+    <div>
+        <p>
+            <b>Controller:</b> @Model.ControllerName<br />
+            <b>Action:</b> @Model.ActionName<br />
+            <b>Exception:</b> @Model.Exception.Message
+        </p>
+    </div>
+}

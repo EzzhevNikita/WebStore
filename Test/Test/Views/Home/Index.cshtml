@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Test.Models.Product>
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<html>
+<head Products />
+<body>
+    <div class="items">
+        @Html.ValidationMessage("Error")
+        @if (Model != null)
+            {
+            foreach (var p in Model)
+            {
+                <form method="post" action="">
+                    <input type="hidden" value="@p.id" name="id" />
+                    <div class="item">
+                        <h3>@Html.DisplayFor(modelItem => p.Name)</h3>
+                        Description: @Html.DisplayFor(modelItem => p.Description)
+                        <h4>@Html.DisplayFor(modelItem => p.Price)</h4>
+                        <button name='submit'>
+                            Add to cart
+                        </button>
+                    </div>
+                </form>
+            }
+        }
+    </div>
+</body>
+</html>

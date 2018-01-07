@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Test.Models.Category>
+@{
+    ViewBag.Title = "AddNewCategory";
+}
+
+<h2>AddNewCategory</h2>
+
+@Html.ValidationMessage("Error")
+@if (Model != null)
+{
+    <table>
+        <tr>
+            <th style="border: 1px solid black">id</th>
+            <th style="border: 1px solid black">Name</th>
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.id)</th>
+                <th style="border: 1px solid black">@Html.DisplayFor(modelItem => p.Name)</th>
+            </tr>
+        }
+        <tr>
+            <th style="border: 1px solid black"></th>
+            <th style="border: 1px solid black">
+                <form method="post" , action="AddNewCategory">
+                    <input type="text" name="Name">
+                    <input type="submit" name="Save" value="Save" />
+                </form>
+            </th>
+        </tr>
+    </table>
+}
+<a href="~/Sales/SellerPanel">SellerPanel</a>

@@ -1,0 +1,57 @@
+﻿@model Test.Models.OrdersViewModel
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>Orders</h2>
+
+<div class="items">
+    @Html.ValidationMessage("Error")
+    @if (Model != null)
+    {
+        foreach (var o in Model.order)
+        {
+            <div class="item" border="3px solid #000">
+                <div>
+                    <label for="DateOfOrder">DateOfOrder:</label>
+                    <h3>@Html.DisplayFor(modelItem => o.DateOfOrder)</h3>
+                </div>
+                <div>
+                    <label for="Status">Status:</label>
+                    <h3>@Html.DisplayFor(modelItem => o.Status)</h3>
+                </div>
+                <div>
+                    <label for="PaymentDate">PaymentDate:</label>
+                    <h3>@Html.DisplayFor(modelItem => o.PaymentDate)</h3>
+                </div>
+                <div>
+                    <label for="Sum">Sum:</label>
+                    <h3>@Html.DisplayFor(modelItem => o.Sum)</h3>
+                </div>
+                <div class="orderitems">
+                    <h3>Order items</h3>
+                    <table>
+                        <tr>
+                            <th style="border: 1px solid black">id</th>
+                            <th style="border: 1px solid black">Product_Name</th>
+                            <th style="border: 1px solid black">Price</th>
+                            <th style="border: 1px solid black">Number</th>
+                        </tr>
+                        @foreach (var oi in Model.orderItem)
+                    {
+                        if (oi.Order_id == o.id)
+                        {
+                                <tr>
+                                    <th >@Html.DisplayFor(modelItem => oi.id)</th>
+                                    <th style="border: 1px solid black">@Html.DisplayFor(modelItem => oi.Product_Name)</th>
+                                    <th style="border: 1px solid black">@Html.DisplayFor(modelItem => oi.Price)</th>
+                                    <th style="border: 1px solid black">@Html.DisplayFor(modelItem => oi.Number)</th>
+                                </tr>
+                            }
+                        }
+                    </table>
+                </div>
+            </div>
+        }
+    }
+</div>

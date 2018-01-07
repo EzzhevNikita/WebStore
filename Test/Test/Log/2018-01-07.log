@@ -1,0 +1,30 @@
+2018-01-07 13:47:48.2947 - ERROR Test.MvcApplication.Application_Error Не удалось найти общедоступный метод действия "oijjooi" на контроллере "Test.Controllers.HomeController".  
+HttpApplication.RaiseOnError => EventHandler.Invoke => MvcApplication.Application_Error
+2018-01-07 16:33:53.9658 - ERROR Test.Models.UserMethods.ViewHistory Заданное приведение является недопустимым.  
+<no type>.lambda_method => HomeController.History => UserMethods.ViewHistory
+2018-01-07 16:39:58.3957 - ERROR Test.Models.UserMethods.ViewHistory Заданное приведение является недопустимым.  
+<no type>.lambda_method => HomeController.History => UserMethods.ViewHistory
+2018-01-07 19:12:33.7092 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:12:38.8154 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:12:40.2954 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:12:41.2771 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:12:48.9214 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:13:08.5886 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:13:24.5194 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:13:25.4783 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:13:59.7139 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 19:18:15.0990 - ERROR Test.Models.SalesPerson.GetItems Последовательность не содержит элементов  
+<no type>.lambda_method => SalesController.SellerPanel => SalesPerson.GetItems
+2018-01-07 20:16:02.4441 - ERROR Test.MvcApplication.Application_Error Элемент модели, переданный в словарь, имеет тип "System.Web.Mvc.ViewResult", но для этого словаря требуется элемент модели типа "Test.Models.LoginViewModel".  
+HttpApplication.RaiseOnError => EventHandler.Invoke => MvcApplication.Application_Error
+2018-01-07 20:20:25.1205 - ERROR Test.MvcApplication.Application_Error Не удалось найти общедоступный метод действия "AccountRestoring" на контроллере "Test.Controllers.HomeController".  
+HttpApplication.RaiseOnError => EventHandler.Invoke => MvcApplication.Application_Error
